@@ -1,13 +1,11 @@
 'use strict';
 
-import React, {
-  PropTypes,
+import React, { PropTypes } from 'react';
+import {
   StyleSheet,
   TouchableWithoutFeedback,
   View
 } from 'react-native';
-
-import autobind from 'autobind-decorator';
 
 export default class Tab extends React.Component {
   static propTypes = {
@@ -28,8 +26,7 @@ export default class Tab extends React.Component {
     );
   }
 
-  @autobind
-  _handlePress(event) {
+  _handlePress = (event) => {
     if (this.props.onPress) {
       this.props.onPress(event);
     }

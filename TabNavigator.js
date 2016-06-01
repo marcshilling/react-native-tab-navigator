@@ -1,13 +1,11 @@
 'use strict';
 
 import { Set } from 'immutable';
-import React, {
-  PropTypes,
+import React, { PropTypes } from 'react';
+import {
   StyleSheet,
   View
 } from 'react-native';
-
-import autobind from 'autobind-decorator';
 
 import Layout from './Layout';
 import StaticContainer from './StaticContainer';
@@ -83,8 +81,7 @@ export default class TabNavigator extends React.Component {
     );
   }
 
-  @autobind
-  _renderTab(item) {
+  _renderTab = (item) => {
     let icon;
     if (item.props.selected) {
       if (item.props.renderSelectedIcon) {
